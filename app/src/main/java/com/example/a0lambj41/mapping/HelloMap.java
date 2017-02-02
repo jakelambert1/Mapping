@@ -27,6 +27,6 @@ public class HelloMap extends Activity
 
         mv.setBuiltInZoomControls(true); //sets plus and minus icons to zoom in & out
         mv.getController().setZoom(14); //sets it to street level. Higher numbers = more zoomed in
-        mv.getController().setCenter(new GeoPoint(51.05,-0.72)); //co ordinates of a specific place
+        mv.getController().setCenter(new GeoPoint(40.1,22.5)); //co ordinates of a specific place
     }
 }
