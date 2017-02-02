@@ -4,12 +4,35 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-    <org.osmdroid.views.MapView
+
+
+    <EditText
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:enabled="true"
-        android:clickable="true"
-        android:id="@+id/map1"
-        tilesource="Mapnik"
-        />
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:id="@+id/LatitudeEditText"
+        android:hint="@string/latitude" />
+    <!--The word latitude has to be linked to the strings page-->
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/LongitudeEditText"
+        android:layout_gravity="center_horizontal"
+        android:hint="@string/longitude" />
+    <!--The word longitude has to be linked to the strings page-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Go"
+            android:id="@+id/button"
+            android:layout_gravity="center_horizontal" />
+
+        <org.osmdroid.views.MapView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:enabled="true"
+            android:clickable="true"
+            android:id="@+id/map1"
+            tilesource="Mapnik"
+            />
+    </LinearLayout>
