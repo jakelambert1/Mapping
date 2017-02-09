@@ -9,7 +9,7 @@ import android.widget.Button;
 /**
  * Created by 0lambj41 on 09/02/2017.
  */
-public class MapChooseActivity extends Activity {
+public class MapChooseActivity extends Activity implements View.OnClickListener {
 
     public void onCreate(Bundle savedInstanceState)
     {
@@ -36,4 +36,6 @@ public class MapChooseActivity extends Activity {
         setResult(RESULT_OK,intent);
         finish();
     }
+
+
 }

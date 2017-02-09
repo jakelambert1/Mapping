@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
 import org.osmdroid.views.MapView;
 import org.osmdroid.util.GeoPoint;
 import org.osmdroid.config.Configuration;
@@ -64,10 +65,33 @@ public class HelloMap extends Activity implements View.OnClickListener {
         {
             //a message to do something, to launch the secondary activity or entirely seperate apps i.e. the phone app
             Intent intent = new Intent(this,MapChooseActivity.class);
-            startActivity(intent);
+            startActivityForResult(intent,0);
             // react to the menu item being selected...
             return true;
         }
         return false;
+    }
+
+
+    protected void onActivityResult(int requestCode,int resultCode,Intent intent)
+    {
+
+        if(requestCode==0)
+        {
+
+            if (resultCode==RESULT_OK)
+            {
+                Bundle extras=intent.getExtras();
+                boolean cyclemap = extras.getBoolean("com.example.cyclemap");
+                if(cyclemap==true)
+                {
+                    mv.setTileSource(TileSourceFactory.CYCLEMAP);
+                }
+                else
+                {
+                    mv.getTileProvider().setTileSource(TileSourceFactory.MAPNIK);
+                }
+            }
+        }
     }
 }

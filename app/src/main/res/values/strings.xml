@@ -4,4 +4,7 @@
     <string name="longitude">Longitude</string>
     <string name="Go">Go!</string>
     <string name="mapnik">Mapnik</string>
+    <string name="choosemap">choosemap</string>
+    <string name="regularview">regularview</string>
+    <string name="cyclemapview">cyclemapview</string>
 </resources>
