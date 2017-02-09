@@ -1,8 +1,12 @@
 package com.example.a0lambj41.mapping;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -45,5 +49,25 @@ public class HelloMap extends Activity implements View.OnClickListener {
         double lon = Double.parseDouble(longEditText.getText().toString()); //Enter number from keyboard
 
         mv.getController().setCenter(new GeoPoint(lat,lon));
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) //expands it into a java menu object
+    {
+        MenuInflater inflater=getMenuInflater();
+        inflater.inflate(R.menu.menu_hello_map, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) //handles the user selecting a menu item
+    {
+        if(item.getItemId() == R.id.choosemap)
+        {
+            //a message to do something, to launch the secondary activity or entirely seperate apps i.e. the phone app
+            Intent intent = new Intent(this,MapChooseActivity.class);
+            startActivity(intent);
+            // react to the menu item being selected...
+            return true;
+        }
+        return false;
     }
 }
