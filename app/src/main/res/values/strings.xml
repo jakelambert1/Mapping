@@ -7,4 +7,5 @@
     <string name="choosemap">choosemap</string>
     <string name="regularview">regularview</string>
     <string name="cyclemapview">cyclemapview</string>
+    <string name="setlocation">setlocation</string>
 </resources>

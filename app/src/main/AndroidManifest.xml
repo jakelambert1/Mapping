@@ -3,7 +3,7 @@
     package="com.example.a0lambj41.mapping">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <!--Users installing app will be warned that this app uses the internet to track their current location-->
+    <!-- Users installing app will be warned that this app uses the internet to track their current location -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -23,7 +23,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MapChooseActivity"></activity>
+        <activity android:name=".MapChooseActivity" />
+        <activity android:name=".ActivityetLocationAct" />
+        <activity android:name=".SetLocationActivity"></activity>
     </application>
 
 </manifest>
