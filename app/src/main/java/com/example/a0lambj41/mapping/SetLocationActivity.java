@@ -34,7 +34,7 @@ public class SetLocationActivity extends Activity implements View.OnClickListene
         latlongBundle.putDouble("com.0lambj41.longitude", longitude);
 
         //send the bundle to the parent activity
-        Intent intent = new Intent;
+        Intent intent = new Intent();
         intent.putExtras(latlongBundle);
         setResult(RESULT_OK, intent);
         finish();

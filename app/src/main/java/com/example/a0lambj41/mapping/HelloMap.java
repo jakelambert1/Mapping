@@ -98,6 +98,13 @@ public class HelloMap extends Activity implements View.OnClickListener {
                     mv.getTileProvider().setTileSource(TileSourceFactory.MAPNIK);
                 }
             }
+
         }
+        else if (requestCode==1)
+        {
+            Bundle extras=intent.getExtras();
+
+        }
+
     }
 }
