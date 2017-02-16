@@ -102,8 +102,13 @@ public class HelloMap extends Activity implements View.OnClickListener {
         }
         else if (requestCode==1)
         {
-            Bundle extras=intent.getExtras();
+            if (resultCode==RESULT_OK) {
+                Bundle latlongBundle = intent.getExtras();
+                double latitude = latlongBundle.getDouble("com.0lambj41.latitude");
+                double longitude = latlongBundle.getDouble("com.0lambj41.longitude");
 
+                mv.getController().setCenter(new GeoPoint(longitude, latitude));
+            }
         }
 
     }
