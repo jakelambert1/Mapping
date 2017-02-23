@@ -16,6 +16,7 @@ public class MapTypeListActivity extends ListActivity
     private String[] descriptions;
     String[] names;
 
+
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
