@@ -8,4 +8,5 @@
     <string name="regularview">regularview</string>
     <string name="cyclemapview">cyclemapview</string>
     <string name="setlocation">setlocation</string>
+    <string name="ChooseMapStyleList">Choose Map Style (List)</string>
 </resources>

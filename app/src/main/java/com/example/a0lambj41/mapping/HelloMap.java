@@ -75,6 +75,13 @@ public class HelloMap extends Activity implements View.OnClickListener {
             startActivityForResult(intent, 1);
             return true;
         }
+
+        else if (item.getItemId() == R.id.ChooseMapStyleList)
+        {
+            Intent intent = new Intent(this, MapTypeListActivity.class);
+            startActivityForResult(intent, 0);
+            return true;
+        }
         return false;
     }
 
