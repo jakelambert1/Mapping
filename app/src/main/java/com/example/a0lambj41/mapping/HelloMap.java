@@ -121,6 +121,7 @@ public class HelloMap extends Activity implements View.OnClickListener {
 
     }
 
+    
     public void onStart()
     {
         super.onStart();
